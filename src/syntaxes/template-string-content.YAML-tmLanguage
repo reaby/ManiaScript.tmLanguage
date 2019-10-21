@@ -1,6 +1,7 @@
 template-string-content:
     patterns:
         -
+            name: entity.template-string.element.ms
             begin: '{{{'
             beginCaptures:
                 '0': {name: keyword.control.flow.expression.ms}

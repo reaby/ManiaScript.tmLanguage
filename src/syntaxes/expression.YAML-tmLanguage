@@ -1,7 +1,9 @@
 expression:
     patterns:
         -
-            include: '#support'
+            include: '#support-classes'
+        -
+            include: '#support-functions'
         -
             include: '#comments'
         -
@@ -20,6 +22,8 @@ expression:
             include: '#keyword-storage'
         -
             include: '#storage-types'
+        -
+            include: '#literal-struct'
         -
             include: '#operators'
         -

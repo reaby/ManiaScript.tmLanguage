@@ -1,0 +1,29 @@
+literal-struct:
+    patterns:
+        -
+            begin: '(#\bStruct\b)\s+\b(\w+?)\b\s+(?={)'
+            beginCaptures:
+                '1': { name: keyword.language.control.ms }
+                '2': { name: support.class.structure.ms }
+            end: \}
+            endCaptures:
+                '0': {name: meta.brace.curly.ms}
+            name: support.struct.ms
+            patterns:
+                -
+                    name: support.struct.property.ms
+                    match: '(\w+)((\[(\w*)\]){0,4})\s+(\w+)'
+                    captures:
+                        '1':
+                            patterns:
+                                -
+                                    include: '#storage-types'
+                                -
+                                    include: '#support-classes'
+                        '2':
+                            patterns:
+                                -
+                                    include: '#storage-types'
+                                -
+                                    include: '#support-classes'
+                        '5': { name: variable.type.readwrite.ms }

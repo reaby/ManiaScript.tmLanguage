@@ -9,8 +9,10 @@ const plist = require('plist')
 const yamlLoader = require('./yaml-import-loader')
 
 yamlLoader('src/syntaxes/_index.yaml', (err, res) => {
-  if (err) throw new Error(err)
-
+  if (err) {
+	  console.log(err);
+	  throw new Error();
+  }
   const encodeObject = (obj) => {
     const str = JSON.stringify(obj)
     const esc = str

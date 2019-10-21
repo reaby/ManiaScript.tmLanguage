@@ -1,0 +1,5 @@
+support-functions:
+    patterns:
+        -
+            match: '(?<!\.)\b(count|containsonly|containsoneof|slice|exists|existskey|remove|removekey|add|addfirst|sort|sortreverse|sortkey|sortkeyreverse|keyof|tojson|fromjson)\b'
+            name: support.function.ms

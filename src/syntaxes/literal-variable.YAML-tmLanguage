@@ -8,11 +8,6 @@ literal-variable:
             name: variable.other.constant.ms
         -
             captures:
-                '1': {name: punctuation.dollar.ms}
-            match: '(\$)[$\w]+'
-            name: variable.other.dollar.ms
-        -
-            captures:
                 '1': {name: variable.other.class.ms}
                 '2': {name: keyword.operator.accessor.ms}
                 '3': {name: variable.other.property.static.ms}

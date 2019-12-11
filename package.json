@@ -24,6 +24,8 @@
     "pad-stream": "^2.0.0",
     "rimraf": "^2.6.1",
     "split": "^1.0.0",
-    "through": "^2.3.8"
+    "through": "^2.3.8",
+    "yamljs": "latest",
+    "plist": "latest"
   }
 }

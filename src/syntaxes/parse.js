@@ -5,12 +5,21 @@ fs.readdir(".", (err, files) => {
     files.forEach(file => {
         if (file != "parse.js") {
             console.log(file);
-
-            YAML.parse(fs.readFileSync("./" + file).toString(), function(err) {
+            try {
+                YAML.parse(fs.readFileSync("./" + file).toString(), function (err) {
+                    if (err) {
+                        throw err;
+                    }
+                });
+            } catch (err) {
                 console.log(err);
-            });
+                return;
+            }
         }
-    })
+    });
+    if (err) {
+        console.log(err);
+    }
 });
 
 

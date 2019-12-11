@@ -1,11 +1,11 @@
 literal-struct:
     patterns:
-        -
-            begin: '(#\bStruct\b)\s+\b(\w+?)\b\s+(?={)'
+        -   
+            begin: '(#\bStruct\b)\s+\b(.+?)\b\s*(?={)'
             beginCaptures:
                 '1': { name: keyword.language.control.ms }
                 '2': { name: support.class.structure.ms }
-            end: \}
+            end: '}'
             endCaptures:
                 '0': {name: meta.brace.curly.ms}
             name: support.struct.ms
@@ -16,14 +16,10 @@ literal-struct:
                     captures:
                         '1':
                             patterns:
-                                -
-                                    include: '#storage-types'
-                                -
-                                    include: '#support-classes'
+                                -   { include: '#storage-types' }
+                                -   { include: '#support-classes' }
                         '2':
                             patterns:
-                                -
-                                    include: '#storage-types'
-                                -
-                                    include: '#support-classes'
+                                -   { include: '#storage-types' }
+                                -   { include: '#support-classes' } 
                         '5': { name: variable.type.readwrite.ms }

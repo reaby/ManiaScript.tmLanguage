@@ -1,10 +1,13 @@
 keyword-language:
     patterns:
         -
-            comment: 'Common control keywords found in various imperitive C style languages'
-            match: '\b(assert|foreach|break|case|continue|log|do|else|finally|for|yield|if|return|switch|switchtype|while|in|metadata)\b'
-            name: keyword.language.control.flow.ms
+            comment: 'Common control keywords found in various C style languages'
+            # moved to operators: in, as, for
+            # moved to support functions: log, assert
+            match: '\b(break|case|continue|do|else|for|foreach|if|sleep|yield|return|switch|switchtype|while|wait)\b'
+            name: keyword.language.control.flow.ms        
         -
-            comment: 'Unique keywords, things very specific to mania'
+            comment: 'Unique keywords, things very specific to maniascript'
             match: '#\b(Command|Include|RequireContext|Setting|Const|Extends)\b'
             name: keyword.language.control.ms
+            

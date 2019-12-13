@@ -3,7 +3,7 @@ const YAML = require('yamljs');
 
 fs.readdir(".", (err, files) => {
     files.forEach(file => {
-        if (file != "parse.js") {
+        if (file !== "parse.js") {
             console.log(file);
             try {
                 YAML.parse(fs.readFileSync("./" + file).toString(), function (err) {
@@ -13,7 +13,7 @@ fs.readdir(".", (err, files) => {
                 });
             } catch (err) {
                 console.log(err);
-                return;
+                process.exit(1);
             }
         }
     });

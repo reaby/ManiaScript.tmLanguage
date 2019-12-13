@@ -1,6 +1,5 @@
 keyword-storage:
     patterns:
-        -
-            name: storage.type.ms
-            match: '(?<!\.)\b(persistent|netread|netwrite|define|declare)\b'
-            
+        -   
+            match: '(?<!\.)\b(persistent|netread|netwrite|declare|metadata)\b'
+            name: storage.type.ms   

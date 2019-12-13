@@ -10,14 +10,15 @@ literal-struct:
                 '0': {name: meta.brace.curly.ms}
             name: support.struct.ms
             patterns:
-                -
+                - {include: '#comments'}
+                -                    
+                    match: '(\w+)((\[(\w*)\]){0,5})\s+(\w+)'
                     name: support.struct.property.ms
-                    match: '(\w+)((\[(\w*)\]){0,4})\s+(\w+)'
                     captures:
                         '1':
                             patterns:
                                 -   { include: '#storage-types' }
-                                -   { include: '#support-classes' }
+                                -   { include: '#support-classes' }                                
                         '2':
                             patterns:
                                 -   { include: '#storage-types' }

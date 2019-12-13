@@ -1,7 +1,7 @@
 operators:
     patterns:
         -
-            match: '(?<!\.)\b(in|as|for)\b'
+            match: '\s+\b(in|as|for)\b\s+'
             name: keyword.operator.ms
         -
             match: '!(?!=)|&&|\|\|'

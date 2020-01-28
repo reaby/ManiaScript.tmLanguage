@@ -9,8 +9,6 @@ expression:
         -
             include: '#literal-switch'
         -
-            include: '#literal-regexp'
-        -
             include: '#literal-template-string'
         -
             include: '#literal-string'
@@ -32,6 +30,8 @@ expression:
             include: '#literal-function-call'
         -
             include: '#literal-variable'
+        -   
+            include: '#literal-for'
         -
             include: '#punctuation'
         -

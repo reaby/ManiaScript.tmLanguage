@@ -16,7 +16,7 @@ round-brackets:
             end: \)
             endCaptures:
                 '0': {name: meta.brace.round.ms}
-            name: meta.group.braces.round
+            name: meta.brace.round
             patterns:
                 - {include: '#expression'}
 square-brackets:
@@ -28,7 +28,7 @@ square-brackets:
             end: '\]'
             endCaptures:
                 '0': {name: meta.brace.square.ms}
-            name: meta.group.braces.square
+            name: meta.brace.square
             patterns:
                 - {include: '#expression'}
 curly-brackets:
@@ -40,6 +40,6 @@ curly-brackets:
             end: '\}'
             endCaptures:
                 '0': {name: meta.brace.curly.ms}
-            name: meta.group.braces.curly
+            name: punctuation.definition.block
             patterns:
                 - {include: $self}

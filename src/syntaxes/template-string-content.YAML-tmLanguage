@@ -1,7 +1,7 @@
 template-string-content:
     patterns:
         -
-            name: entity.template-string.element.ms
+            name: entity.templatestring.element.ms
             begin: '{{{'
             beginCaptures:
                 '0': {name: keyword.control.flow.expression.ms}
@@ -12,11 +12,11 @@ template-string-content:
                 - {include: '#expression'}
         -
             name: meta.embedded.script.block.ms
-            begin: '(<script>)(<!--|<\!\[CDATA\[)'
+            begin: '(<script>)(<!--|\<\!\[CDATA\[)'
             beginCaptures:
                 '0': {name: meta.embedded.tag.script.open.ms}
                 '1': {name: meta.embedded.tag.comment.open.ms}
-            end: '(-->|\]\]>)(<\/script>)'
+            end: '(-->|\]\]>)(\<\/script>)'
             endCaptures:
                 '0': {name: meta.embedded.tag.comment.close.ms}
                 '1': {name: meta.embedded.tag.script.close.ms}                

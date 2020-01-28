@@ -4,10 +4,22 @@ keyword-language:
             comment: 'Common control keywords found in various C style languages'
             # moved to operators: in, as, for
             # moved to support functions: log, assert
-            match: '\b(break|case|continue|do|else|for|foreach|if|sleep|yield|return|switch|switchtype|while|wait)\b'
-            name: keyword.language.control.flow.ms        
+            match: '\b(break|continue|do|for|foreach|sleep|yield|return|while|meanwhile|wait)\b'
+            name: keyword.control.flow.ms
         -
-            comment: 'Unique keywords, things very specific to maniascript'
-            match: '#\b(Command|Include|RequireContext|Setting|Const|Extends)\b'
-            name: keyword.language.control.ms
-            
+            comment: 'Common control keywords found in various C style languages'
+            # moved to operators: in, as, for
+            # moved to support functions: log, assert
+            match: '\b(case|else|if)\b'
+            name: keyword.control.conditional.ms        
+        -
+            comment: 'Keywords specific to maniascript'
+            match: '#\b(Command|RequireContext|Setting|Const|Extends)\b'
+            name: keyword.control.ms
+        -   
+            match: '(#\bInclude\b)\s+(".*?")(\s+as\s+\b(\w+)\b){0,1}'
+            captures:
+                '1': { name: keyword.control.ms }                
+                '2': { name: string.quoted.ms }
+                '4': { name: support.class.ms }
+            name: meta.include.ms  

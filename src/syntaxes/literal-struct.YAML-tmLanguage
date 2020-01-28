@@ -1,9 +1,9 @@
 literal-struct:
     patterns:
         -   
-            begin: '(#\bStruct\b)\s+\b(.+?)\b\s*(?={)'
+            begin: '(\#\bStruct\b)\s+\b(.+?)\b\s*(?={)'
             beginCaptures:
-                '1': { name: keyword.language.control.ms }
+                '1': { name: keyword.control.ms }
                 '2': { name: support.class.structure.ms }
             end: '}'
             endCaptures:
@@ -24,3 +24,18 @@ literal-struct:
                                 -   { include: '#storage-types' }
                                 -   { include: '#support-classes' } 
                         '5': { name: variable.type.readwrite.ms }
+        -   
+            match: '(#\bStruct\b)\s+(\w+)\s+as\s+\b(\w+)\b'
+            captures:
+                '1': { name: keyword.control.ms }                
+                '2': { name: support.class.structure.ms }
+                '3': { name: support.class.structure.ms }
+            name: support.struct.ms            
+        -
+            match: '(#\bStruct\b)\s+(\w+)::(\w+)\s+as\s+\b(\w+)\b'
+            captures:
+                '1': { name: keyword.control.ms }
+                '2': { name: support.class.ms }
+                '3': { name: support.class.ms }
+                '4': { name: support.class.ms }
+            name: support.struct.ms

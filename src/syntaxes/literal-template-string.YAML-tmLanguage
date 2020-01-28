@@ -7,8 +7,9 @@ literal-template-string:
             end: '"""'
             endCaptures:
                 '0': {name: punctuation.definition.template-string.end.ms}
-            name: string.template-string.ms
+            name: string.templatestring.ms
+            injectionSelector: "L:comment.block.xml",
             patterns:
                 - {include: '#template-string-content'}              
                 - {include: 'text.xml'}
-                - {begin: '{{{', beginCaptures: {'0': {name: punctuation.template-string.element.begin.ms}}, end: '}}}', endCaptures: {'0': {name: punctuation.template-string.element.end.ms}}, name: entity.template-string.element.ms, patterns: [{include: '#expression'}]}
+                - {begin: '{{{', beginCaptures: {'0': {name: punctuation.templatestring.element.begin.ms}}, end: '}}}', endCaptures: {'0': {name: punctuation.templatestring.element.end.ms}}, name: entity.templatestring.element.ms, patterns: [{include: '#expression'}]}

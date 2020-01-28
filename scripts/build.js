@@ -34,4 +34,5 @@ yamlLoader('src/syntaxes/_index.yaml', (err, res) => {
     builds.forEach(([path, buffer]) =>
         fs.writeFileSync(path, buffer, 'utf8',
             console.log(chalk.yellow('write'), chalk.green(`${path}... done!`))))
+    fs.copyFileSync("build/syntaxes/ManiaScript.json", "../vscode-maniascript/syntaxes/ManiaScript.json");
 });

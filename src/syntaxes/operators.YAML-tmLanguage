@@ -1,10 +1,10 @@
 operators:
     patterns:
         -
-            match: '\s+\b(in|as|for)\b\s+'
+            match: '\s+\b(as|in|for)\b(?!\s*\()'
             name: keyword.operator.ms
         -
-            match: '!(?!=)|&&|\|\|'
+            match: '!(?!=)|&&|[|]{2}'
             name: keyword.operator.logical.ms
         -
             match: '=(?!=)'
@@ -24,6 +24,3 @@ operators:
         -
             match: '::'
             name: keyword.operator.accessor.method.ms
-        -
-            match: .\|
-            name: keyword.operator.accessor.property.ms

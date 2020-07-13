@@ -8,7 +8,7 @@ language-constant:
             name: constant.language.boolean.false.ms
         -
             match: '(?<!\.)\bNull\b'
-            name: constant.langugage.null.ms
+            name: constant.language.null.ms
         -
             match: '(?<!\.)\bNullId\b'
             name: constant.language.null.ms

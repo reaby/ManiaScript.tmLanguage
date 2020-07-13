@@ -4,10 +4,10 @@ template-string-content:
             name: entity.templatestring.element.ms
             begin: '{{{'
             beginCaptures:
-                '0': {name: keyword.control.flow.expression.ms}
+                '0': {name: meta.embedded.tag.script.open.ms}
             end: '}}}'
             endCaptures:
-                '0': {name: keyword.control.flow.expression.ms}
+                '0': {name: meta.embedded.tag.script.close.ms}
             patterns:
                 - {include: '#expression'}
         -

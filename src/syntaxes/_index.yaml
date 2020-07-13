@@ -10,7 +10,6 @@ patterns:
 repository:
     #import('./brackets')
     #import('./comments')
-    #import('./core')
     #import('./storage-types')
     #import('./keyword-language')
     #import('./keyword-storage')
@@ -22,7 +21,6 @@ repository:
     #import('./operators')
     #import('./literal-template-string')
     #import('./template-string-content')
-    #import('./literal-regexp')
     #import('./literal-string')
     #import('./literal-switch')
     #import('./function-declaration-parameters')
@@ -32,4 +30,4 @@ repository:
     #import('./literal-for')
     #import('./literal-function-call')
     #import('./expression')
-
+    #import('./core')

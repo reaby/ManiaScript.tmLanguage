@@ -4,24 +4,24 @@ literal-variable:
             match: '(?<!(?<!\.\.)\.)\b(arguments)\b'
             name: variable.parameter.ms
         -
-            match: '[A-Z][_$\dA-Z]*\b'
-            name: variable.other.constant.ms
+            match: '\w+(?=::)|(?<=::)\w+'
+            name: entity.name.type.enum.ms
         - 
               captures:
                   '1': {name: support.class.ms}
                   '2': {name: keyword.operator.accessor.ms}                  
-              match: '(?x)  \b([A-Z][$\w]*)\s*(\:\:)'
+              match: '(?x)  \b([A-Z][\w]*)\s*(\:\:)'
               name: meta.property.class.ms
         -
             captures:
                 '1': {name: variable.other.object.ms}
-            match: '(?<!\.)[_$a-zA-Z][$\w]*\s*(?=[\[\.])'
+            match: '(?<!\.)[_a-zA-Z][\w]*\s*(?=[\[\.])'
             name: variable.other.class.ms
         -
             captures:
                 '2': {name: variable.other.property.ms}
-            match: '(?<=\.)\s*[_$a-zA-Z][$\w]*'
+            match: '(?<=\.)\s*[_a-zA-Z][\w]*'
             name: variable.other.property.static.ms
         -
-            match: '[_$a-zA-Z][$\w]*'
+            match: '[_a-zA-Z][\w]*'
             name: variable.other.readwrite.ms

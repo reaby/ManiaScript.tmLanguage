@@ -25,6 +25,9 @@ storage-types:
             match: '(?<!\.)\bInt3\b'
             name: storage.type.integer-triple.ms
         -
+            match: '(?<!\.)\bInt2\b'
+            name: storage.type.integer-tuple.ms
+        -
             match: '(?<!\.)\bVoid\b'
             name: storage.type.void.ms
             
